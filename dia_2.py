@@ -1,30 +1,16 @@
 #Fabricando una baraja
-import random
 
-#o=oros, c=copas, e=espadas y b=bastos
+# Importamos las funciones from=desde import *=todas
+from funcionesBaraja import *
 
-def creacionBaraja(palos,numeroPalos):
-    baraja=[]
-    for tipos in palos:
-        for x in numerosPalos:
-            baraja.append((tipos,x))
-    return baraja
-
+# Creamos las listas que se usarán para crear y mezclar la baraja
 palos=['o','c','e','b']
 numerosPalos=['A','2','3','4','5','6','7','S','C','R']
 
+
 baraja=(creacionBaraja(palos,numerosPalos))
 
-def barajarBaraja(baraja):
-    barajaMezclada=[]
-    barajaMezclada.append(random.choice(baraja))
-    while len(baraja) != len(barajaMezclada):
-        for cartas in baraja:
-            if cartas in not barajaMezclada:
-                barajaMezclada.append(random.choice(baraja))
-    return barajaMezclada
-        
-
-print(len(baraja))
-print(barajarBaraja(baraja))
-print(len(barajarBaraja(baraja)))
+#Comprobamos que funciona con los print
+print(len(baraja)) # len cuanta el número de items
+print(baraja) # muestra la baraja
+print((MezclarBaraja(baraja))) # muestra la baraja mezclada
